@@ -1,0 +1,12 @@
+.text {
+  &[data-variant="primary"] {
+    color: #263238;
+  }
+  &[data-variant="secondary"] {
+    color: #65624c;
+  }
+}
+
+.appShell {
+  background-color: #F9FAFF;
+}

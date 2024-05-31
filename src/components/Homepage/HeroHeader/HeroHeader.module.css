@@ -1,0 +1,12 @@
+.heroBg {
+  flex-grow: 1;
+}
+
+.coworker {
+  flex-shrink: 0;
+}
+
+.heroText {
+  z-index: 1;
+  position: relative;
+}
