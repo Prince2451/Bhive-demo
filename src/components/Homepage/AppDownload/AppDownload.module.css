@@ -5,7 +5,6 @@
   }
 }
 
-
 .image {
   position: absolute;
   bottom: 0;
@@ -29,13 +28,12 @@
 .downloadContainer {
   width: 50%;
   margin-left: auto;
-  justify-content: flex-start;
+  justify-content: center;
   align-content: flex-start;
   min-height: rem(250);
   @media screen and (max-width: $mantine-breakpoint-md) {
     margin-left: 0;
     width: 100%;
-    justify-content: center;
     min-height: unset;
   }
 }
