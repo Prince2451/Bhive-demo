@@ -1,0 +1,45 @@
+.heading {
+  font-size: var(--mantine-h2-font-size);
+  @media screen and (max-width: $mantine-breakpoint-sm) {
+    font-size: var(--mantine-h3-font-size);
+  }
+}
+
+.image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  object-fit: contain;
+  max-width: rem(450);
+  height: rem(400);
+  @media screen and (max-width: $mantine-breakpoint-md) {
+    position: static;
+    margin: auto;
+    max-height: rem(350);
+  }
+}
+.content {
+  margin-top: rem(180);
+  @media screen and (max-width: $mantine-breakpoint-md) {
+    margin-top: var(--mantine-spacing-xl);
+  }
+}
+
+.downloadContainer {
+  width: 50%;
+  margin-left: auto;
+  justify-content: center;
+  align-content: flex-start;
+  min-height: rem(250);
+  @media screen and (max-width: $mantine-breakpoint-md) {
+    margin-left: 0;
+    width: 100%;
+    min-height: unset;
+  }
+}
+
+.downloadBtnContainer {
+  @media screen and (max-width: $mantine-breakpoint-md) {
+    justify-content: center;
+  }
+}
