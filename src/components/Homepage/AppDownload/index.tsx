@@ -13,35 +13,31 @@ import React from "react";
 import download from "../../../assets/images/app_download.png";
 import appStore from "../../../assets/images/app_store.svg";
 import playStore from "../../../assets/images/play_store.svg";
+import classes from "./AppDownload.module.css";
 
 const AppDownload: React.FC = () => {
   return (
     <Box>
       <Title order={2}>Download our app now</Title>
-      <Paper withBorder mt={rem(180)} pos="relative" radius="lg" shadow="sm" p="md">
+      <Paper
+        withBorder
+        mt={rem(180)}
+        pos="relative"
+        radius="lg"
+        shadow="sm"
+        p="md"
+      >
         <Image
           src={download}
           alt="download-app"
-          w={rem(450)}
-          h={rem(400)}
-          pos="absolute"
-          fit="contain"
-          bottom={0}
-          left={0}
+          className={classes.image}
         />
-        <Stack
-          w="50%"
-          ml="auto"
-          justify="center"
-          align="flex-start"
-          h="100%"
-          mih={rem(250)}
-        >
-          <Text fw={500} fz="h4" c="dark.3">
+        <Stack className={classes.downloadContainer} h="100%" >
+          <Text visibleFrom="md" fw={500} fz="h4" c="dark.3">
             Boost your productivity with the BHIVE Workspace app. Elevate your
             workspace, collaborate efficiently, and unlock exclusive perks.
           </Text>
-          <Group wrap="nowrap" mt="lg">
+          <Group wrap="nowrap" mt="lg" className={classes.downloadBtnContainer}>
             <Anchor target="_blank" href="#" rel="noopener">
               <Image
                 src={playStore}

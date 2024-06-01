@@ -3,29 +3,60 @@
   height: auto;
   object-fit: contain;
 }
+.heading {
+  font-size: var(--mantine-h2-font-size);
+  @media screen and (max-width: $mantine-breakpoint-sm) {
+    font-size: var(--mantine-h3-font-size);
+  }
+}
 
 .cardContainer {
   background-color: transparent;
+  @media screen and (max-width: $mantine-breakpoint-sm) {
+    background-color: var(--mantine-color-white);
+    box-shadow: var(--mantine-shadow-sm);
+    height: 100%;
+  }
+  @media screen and (min-width: $mantine-breakpoint-sm) {
+    &:hover {
+      background-color: var(--mantine-color-white);
+      box-shadow: var(--mantine-shadow-sm);
+      & .primaryText {
+        font-weight: 600;
+        transform: translate(rem(5), 0);
+      }
+      & .secondaryText {
+        opacity: 1;
+      }
+    }
+  }
 }
-.cardContainer:hover {
-  background-color: var(--mantine-color-white);
-  box-shadow: var(--mantine-shadow-sm);
+.cardGroup {
+  flex-wrap: nowrap;
+  padding: var(--mantine-spacing-lg) 0;
+  @media screen and (max-width: $mantine-breakpoint-sm) {
+    flex-direction: column;
+    padding: 0;
+    justify-content: center;
+    padding: var(--mantine-spacing-xs);
+  }
 }
 
 .primaryText {
-  transform: translateY(40%);
+  font-size: var(--mantine-font-size-lg);
+  font-weight: 500;
+  transform: translateY(calc(var(--mantine-font-size-lg) / 2));
   transition: transform 200ms ease-in-out;
+  @media screen and (max-width: $mantine-breakpoint-sm) {
+    text-align: center;
+    transform: translate(0, 0);
+  }
 }
 .secondaryText {
   opacity: 0;
   transition: opacity 200ms ease-in-out;
   margin-left: rem(5);
-}
-
-.cardContainer:hover .secondaryText {
-  opacity: 1;
-}
-
-.cardContainer:hover .primaryText {
-  transform: translate(rem(5), 0);
+  @media screen and (max-width: $mantine-breakpoint-sm) {
+    display: none;
+  }
 }

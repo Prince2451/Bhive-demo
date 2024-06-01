@@ -26,6 +26,7 @@ const HeroHeader: React.FC = () => {
           right={0}
           width="150%"
           h="100%"
+          visibleFrom="md"
         />
         <Image
           src={heroHex}
@@ -43,10 +44,8 @@ const HeroHeader: React.FC = () => {
           h="100%"
           w="100%"
         >
-          <Title order={1} lh={1.25}>
-            Host your meeting with <br />
-            world-class amenities. <br />
-            Starting at{" "}
+          <Title order={1} lh={1.25} className={classes.heroTitle}>
+            Host your meeting with world-class amenities. Starting at{" "}
             <Text span c={theme.colors[theme.primaryColor][5]} inherit inline>
               ₹199/-!
             </Text>

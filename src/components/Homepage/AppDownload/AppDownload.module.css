@@ -1,0 +1,33 @@
+.image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  object-fit: contain;
+  max-width: rem(450);
+  height: rem(400);
+  @media screen and (max-width: $mantine-breakpoint-md) {
+    position: static;
+    margin: auto;
+    max-height: rem(350);
+  }
+}
+
+.downloadContainer {
+  width: 50%;
+  margin-left: auto;
+  justify-content: flex-start;
+  align-content: flex-start;
+  min-height: rem(250);
+  @media screen and (max-width: $mantine-breakpoint-md) {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+    min-height: unset;
+  }
+}
+
+.downloadBtnContainer {
+  @media screen and (max-width: $mantine-breakpoint-md) {
+    justify-content: center;
+  }
+}

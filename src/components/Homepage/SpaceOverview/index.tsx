@@ -1,6 +1,8 @@
-import { Box, Grid, Title, rem } from "@mantine/core";
+import { Box, Grid, Group, Image, Title, rem } from "@mantine/core";
 import React from "react";
 import PropertyCard from "./PropertyCard";
+import arrow from "../../../assets/images/arrow.svg";
+import classes from "./SpaceOverview.module.css";
 
 const SpaceOverview: React.FC = () => {
   const items = [
@@ -49,15 +51,25 @@ const SpaceOverview: React.FC = () => {
 
   return (
     <Box>
-      <Title order={2}>Our Space Overview</Title>
+      <Group justify="space-between">
+        <Title className={classes.heading}>Our Space Overview</Title>
+        <Image
+          hiddenFrom="sm"
+          src={arrow}
+          w={rem(24)}
+          h="auto"
+          fit="contain"
+          alt="arrow"
+        />
+      </Group>
       <Grid gutter="xl" mt={rem(40)}>
         {items.map((item, i) => (
           <Grid.Col
             key={i}
             span={{
               lg: 4,
-              md: 6,
-              sm: 12,
+              sm: 6,
+              base: 12,
             }}
           >
             <PropertyCard {...item} />

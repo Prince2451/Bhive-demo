@@ -4,11 +4,27 @@
 
 .coworker {
   flex-shrink: 0;
+  @media screen and (max-width: $mantine-breakpoint-sm) {
+    max-height: rem(300);
+  }
 }
 
 .heroText {
   z-index: 1;
   position: relative;
+  @media screen and (max-width: $mantine-breakpoint-sm) {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+}
+.heroTitle {
+  font-size: var(--mantine-h1-font-size);
+  @media screen and (max-width: $mantine-breakpoint-md) {
+    font-size: var(--mantine-h2-font-size);
+  }
+  @media screen and (max-width: $mantine-breakpoint-xs) {
+    font-size: var(--mantine-h4-font-size);
+  }
 }
 .coworker {
   z-index: 1;

@@ -17,6 +17,7 @@ import lounges from "../../../assets/images/lounges.svg";
 import quickBookings from "../../../assets/images/quick_booking.svg";
 import sports from "../../../assets/images/sports.svg";
 import wifi from "../../../assets/images/wifi.svg";
+import arrow from "../../../assets/images/arrow.svg";
 import classes from "./Amenities.module.css";
 
 const Amenities: React.FC = () => {
@@ -65,28 +66,36 @@ const Amenities: React.FC = () => {
 
   return (
     <Box>
-      <Title order={2}>Why Choose us?</Title>
+      <Group justify="space-between">
+        <Title className={classes.heading}>Why Choose us?</Title>
+        <Image
+          hiddenFrom="sm"
+          src={arrow}
+          w={rem(24)}
+          h="auto"
+          fit="contain"
+          alt="arrow"
+        />
+      </Group>
       <Grid mt={rem(40)}>
         {items.map((item, i) => (
           <Grid.Col
             span={{
-              sm: 6,
+              base: 6,
               lg: 3,
               md: 4,
             }}
             key={i}
           >
             <Paper className={classes.cardContainer} px="md" radius="md">
-              <Group wrap="nowrap" h={rem(80)}>
+              <Group className={classes.cardGroup} h="100%">
                 <Image
                   src={item.url}
                   alt={item.label}
                   className={classes.icon}
                 />
                 <Box>
-                  <Text className={classes.primaryText} fw={500} size="lg">
-                    {item.label}
-                  </Text>
+                  <Text className={classes.primaryText}>{item.label}</Text>
                   <Text
                     className={classes.secondaryText}
                     fw={400}
