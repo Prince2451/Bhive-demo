@@ -1,5 +1,6 @@
 import {
   AppShell,
+  Button,
   Container,
   Text,
   Title,
@@ -14,7 +15,7 @@ export const theme = createTheme({
   components: {
     Container: Container.extend({
       defaultProps: {
-        size: rem(1600),
+        size: rem(1200),
       },
     }),
     Text: Text.extend({
@@ -30,6 +31,7 @@ export const theme = createTheme({
       },
     }),
     AppShell: AppShell.extend({ classNames: { root: classes.appShell } }),
+    Button: Button.extend({ classNames: { root: classes.button } }),
   },
   colors: {
     yellow: [
@@ -44,6 +46,9 @@ export const theme = createTheme({
       "#ca9400",
       "#af7e00",
     ],
+  },
+  shadows: {
+    sm: "0px 1.08px 8.63px 0px #0000000F"
   },
   cursorType: "pointer",
   headings: {

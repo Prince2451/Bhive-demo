@@ -14,7 +14,7 @@ const Layout: React.FC<PropsWithChildren> = (props) => {
   return (
     <AppShell header={{ height: rem(90) }}>
       <AppShell.Header withBorder={false}>
-        <Container size="100rem" h="100%">
+        <Container h="100%">
           <Group justify="space-between" h="100%" align="center">
             <Image h={rem(40)} w="auto" fit="contain" src={logo} />
             <ActionIcon

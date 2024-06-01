@@ -1,0 +1,35 @@
+.card {
+}
+
+.button {
+  overflow: visible;
+}
+.buttonLabel {
+  width: 100%;
+  justify-content: space-between;
+  overflow: visible;
+}
+.nextArrow {
+  flex-shrink: 0;
+}
+
+.indicator::before {
+  padding: var(--mantine-spacing-xs);
+}
+.discountBanner {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+
+.badge {
+  box-shadow: var(--mantine-shadows-md);
+  border: 0.5px solid alpha(var(--mantine-primary-color-4), 0.5);
+  background: linear-gradient(100.27deg, #263238 22.66%, #2f4b59 67.67%);
+  color: var(--mantine-primary-color-5);
+  & :global(.mantine-Badge-label) {
+    text-transform: none;
+    text-shadow: 0px 1px 5px alpha(var(--mantine-primary-color-3), 0.6);
+  }
+}

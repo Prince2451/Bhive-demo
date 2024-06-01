@@ -1,12 +1,29 @@
+body {
+  --mantine-others-text-primary: #263238;
+  --mantine-others-text-secondary: #65624c;
+}
 .text {
   &[data-variant="primary"] {
-    color: #263238;
+    color: var(--mantine-others-text-primary);
   }
   &[data-variant="secondary"] {
-    color: #65624c;
+    color: var(--mantine-others-text-secondary);
   }
 }
 
 .appShell {
-  background-color: #F9FAFF;
+  background-color: #f9faff;
+}
+
+.button {
+  &[data-variant="primary"] {
+    background-color: var(--mantine-primary-color-4);
+    border: 1px solid var(--mantine-primary-color-5);
+    color: var(--mantine-others-text-primary);
+  }
+  &[data-variant="secondary"] {
+    background-color: #f9f9f9;
+    border: 0.5px solid #eee7e7;
+    color: var(--mantine-others-text-primary);
+  }
 }
