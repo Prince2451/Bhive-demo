@@ -27,3 +27,10 @@ body {
     color: var(--mantine-others-text-primary);
   }
 }
+
+.paper {
+  border-color: #eee7e7cc;
+  &[data-with-border] {
+    border-width: 0.5px;
+  }
+}

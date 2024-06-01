@@ -7,3 +7,25 @@
 .cardContainer {
   background-color: transparent;
 }
+.cardContainer:hover {
+  background-color: var(--mantine-color-white);
+  box-shadow: var(--mantine-shadow-sm);
+}
+
+.primaryText {
+  transform: translateY(40%);
+  transition: transform 200ms ease-in-out;
+}
+.secondaryText {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  margin-left: rem(5);
+}
+
+.cardContainer:hover .secondaryText {
+  opacity: 1;
+}
+
+.cardContainer:hover .primaryText {
+  transform: translate(rem(5), 0);
+}

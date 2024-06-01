@@ -31,13 +31,7 @@ interface PropertyCardProps {
 const PropertyCard: React.FC<PropertyCardProps> = (props) => {
   const theme = useMantineTheme();
   return (
-    <Card
-      withBorder
-      shadow={theme.shadows.sm}
-      style={{ borderColor: "#EEE7E7CC" }}
-      padding="sm"
-      radius="md"
-    >
+    <Card withBorder shadow={theme.shadows.sm} padding="sm" radius="md">
       <Card.Section inheritPadding py="sm">
         <Group justify="space-between" wrap="nowrap" align="center">
           <Title fw={600} order={4} lh={1.3}>
@@ -52,8 +46,6 @@ const PropertyCard: React.FC<PropertyCardProps> = (props) => {
             h={rem(52)}
             py={rem(8)}
             style={{
-              borderColor: "#EEE7E7",
-              borderWidth: "0.5px",
               flexShrink: 0,
             }}
             radius="md"
@@ -78,7 +70,6 @@ const PropertyCard: React.FC<PropertyCardProps> = (props) => {
             fallbackSrc="https://placehold.co/600x400?text=Placeholder"
           />
           <Box pos="absolute" top={rem(8)} left={rem(8)}>
-            {/* @Todo */}
             <Badge
               radius="sm"
               size="xl"

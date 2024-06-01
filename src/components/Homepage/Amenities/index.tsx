@@ -24,34 +24,42 @@ const Amenities: React.FC = () => {
     {
       url: comEvents,
       label: "Community Events",
+      secondaryText: "One liner details about the feature",
     },
     {
       url: gym,
       label: "Gym Facilities",
+      secondaryText: "One liner details about the feature",
     },
     {
       url: wifi,
       label: "High-Speed WiFi",
+      secondaryText: "One liner details about the feature",
     },
     {
       url: cafe,
       label: "Cafe & Tea Bar",
+      secondaryText: "One liner details about the feature",
     },
     {
       url: affordable,
       label: "Affordable",
+      secondaryText: "One liner details about the feature",
     },
     {
       url: lounges,
       label: "Comfort Lounges",
+      secondaryText: "One liner details about the feature",
     },
     {
       url: quickBookings,
       label: "Quick Booking",
+      secondaryText: "One liner details about the feature",
     },
     {
       url: sports,
       label: "Sports Area",
+      secondaryText: "One liner details about the feature",
     },
   ];
 
@@ -68,16 +76,26 @@ const Amenities: React.FC = () => {
             }}
             key={i}
           >
-            <Paper className={classes.cardContainer} px="md">
+            <Paper className={classes.cardContainer} px="md" radius="md">
               <Group wrap="nowrap" h={rem(80)}>
                 <Image
                   src={item.url}
                   alt={item.label}
                   className={classes.icon}
                 />
-                <Text fw={500} size="lg">
-                  {item.label}
-                </Text>
+                <Box>
+                  <Text className={classes.primaryText} fw={500} size="lg">
+                    {item.label}
+                  </Text>
+                  <Text
+                    className={classes.secondaryText}
+                    fw={400}
+                    variant="secondary"
+                    size="xs"
+                  >
+                    {item.secondaryText}
+                  </Text>
+                </Box>
               </Group>
             </Paper>
           </Grid.Col>

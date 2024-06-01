@@ -2,6 +2,7 @@ import {
   AppShell,
   Button,
   Container,
+  Paper,
   Text,
   Title,
   createTheme,
@@ -32,6 +33,7 @@ export const theme = createTheme({
     }),
     AppShell: AppShell.extend({ classNames: { root: classes.appShell } }),
     Button: Button.extend({ classNames: { root: classes.button } }),
+    Paper: Paper.extend({ classNames: { root: classes.paper } }),
   },
   colors: {
     yellow: [
@@ -48,7 +50,7 @@ export const theme = createTheme({
     ],
   },
   shadows: {
-    sm: "0px 1.08px 8.63px 0px #0000000F"
+    sm: "0px 1.08px 8.63px 0px #0000000F",
   },
   cursorType: "pointer",
   headings: {

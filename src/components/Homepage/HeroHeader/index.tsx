@@ -1,12 +1,21 @@
-import { Box, Flex, Image, Text, Title, rem } from "@mantine/core";
+import {
+  Box,
+  Flex,
+  Image,
+  Text,
+  Title,
+  rem,
+  useMantineTheme,
+} from "@mantine/core";
 import React from "react";
 import cowoBg from "../../../assets/images/cowo_bg.svg";
-import coworker from "../../../assets/images/coworker.svg";
+import coworker from "../../../assets/images/coworker.png";
 import heroBg from "../../../assets/images/hero_bg.svg";
 import heroHex from "../../../assets/images/hero_hex.svg";
 import classes from "./HeroHeader.module.css";
 
 const HeroHeader: React.FC = () => {
+  const theme = useMantineTheme();
   return (
     <Flex h={rem(500)} justify="center">
       <Box className={classes.heroBg} pos="relative">
@@ -21,24 +30,31 @@ const HeroHeader: React.FC = () => {
         <Image
           src={heroHex}
           pos="absolute"
-          top="-12%"
-          left="30%"
-          h={rem(180)}
-          w={rem(150)}
+          top="-22%"
+          left="22.5%"
+          h={rem(170)}
+          w={rem(110)}
+          visibleFrom="lg"
         />
-        <Flex className={classes.heroText} align="center" h="100%" w="100%">
-          <Title order={1}>
+        <Flex
+          className={classes.heroText}
+          align="flex-start"
+          mt={rem(80)}
+          h="100%"
+          w="100%"
+        >
+          <Title order={1} lh={1.25}>
             Host your meeting with <br />
             world-class amenities. <br />
             Starting at{" "}
-            <Text span c="yellow" inherit inline>
+            <Text span c={theme.colors[theme.primaryColor][5]} inherit inline>
               ₹199/-!
             </Text>
           </Title>
         </Flex>
       </Box>
 
-      <Box pos="relative" h="100%" w={rem(550)} className={classes.coworker}>
+      <Box pos="relative" h="100%" w={rem(400)} className={classes.coworker}>
         <Image
           src={cowoBg}
           pos="absolute"
@@ -47,7 +63,13 @@ const HeroHeader: React.FC = () => {
           bottom={0}
           left="13%"
         />
-        <Image src={coworker} />
+        <Image
+          src={coworker}
+          pos="relative"
+          alt="coworker"
+          mt="xl"
+          className={classes.coworker}
+        />
       </Box>
     </Flex>
   );

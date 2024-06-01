@@ -4,6 +4,7 @@ import React from "react";
 import HeroHeader from "../../components/Homepage/HeroHeader";
 import Amenities from "../../components/Homepage/Amenities";
 import SpaceOverview from "../../components/Homepage/SpaceOverview";
+import AppDownload from "../../components/Homepage/AppDownload";
 const HomePage: React.FC = () => {
   return (
     <Box px="md">
@@ -13,6 +14,9 @@ const HomePage: React.FC = () => {
       </Box>
       <Box mt={rem(120)}>
         <SpaceOverview />
+      </Box>
+      <Box mt={rem(120)}>
+        <AppDownload />
       </Box>
     </Box>
   );
