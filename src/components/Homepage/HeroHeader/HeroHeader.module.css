@@ -1,3 +1,11 @@
+.heroContainer {
+  height: rem(500);
+  @media screen and (max-width: $mantine-breakpoint-sm) {
+    flex-direction: column-reverse;
+    align-items: center;
+    height: auto;
+  }
+}
 .heroBg {
   flex-grow: 1;
 }
@@ -5,16 +13,42 @@
 .coworker {
   flex-shrink: 0;
   @media screen and (max-width: $mantine-breakpoint-sm) {
-    max-height: rem(300);
+    max-height: rem(350);
+  }
+}
+.coworkerImage {
+  z-index: 1;
+  margin-top: var(--mantine-spacing-xl);
+  object-fit: contain;
+  @media screen and (max-width: $mantine-breakpoint-sm) {
+    max-height: rem(350);
+    margin-top: 0;
+  }
+}
+.coworkerBg {
+  position: absolute;
+  height: 150%;
+  width: 100%;
+  bottom: 0;
+  left: 13%;
+  @media screen and (max-width: $mantine-breakpoint-sm) {
+    left: 20%;
   }
 }
 
 .heroText {
   z-index: 1;
   position: relative;
+  margin-top: rem(80);
+  height: 100%;
+  align-items: flex-start;
   @media screen and (max-width: $mantine-breakpoint-sm) {
+    align-items: center;
     flex-wrap: wrap-reverse;
     justify-content: center;
+    margin-top: unset;
+    margin: auto;
+    height: rem(120);
   }
 }
 .heroTitle {
@@ -22,10 +56,9 @@
   @media screen and (max-width: $mantine-breakpoint-md) {
     font-size: var(--mantine-h2-font-size);
   }
-  @media screen and (max-width: $mantine-breakpoint-xs) {
-    font-size: var(--mantine-h4-font-size);
+  @media screen and (max-width: $mantine-breakpoint-sm) {
+    font-size: var(--mantine-h3-font-size);
+    text-align: center;
+    font-weight: 600;
   }
-}
-.coworker {
-  z-index: 1;
 }

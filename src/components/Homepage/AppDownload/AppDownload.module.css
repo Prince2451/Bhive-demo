@@ -1,3 +1,11 @@
+.heading {
+  font-size: var(--mantine-h2-font-size);
+  @media screen and (max-width: $mantine-breakpoint-sm) {
+    font-size: var(--mantine-h3-font-size);
+  }
+}
+
+
 .image {
   position: absolute;
   bottom: 0;
@@ -9,6 +17,12 @@
     position: static;
     margin: auto;
     max-height: rem(350);
+  }
+}
+.content {
+  margin-top: rem(180);
+  @media screen and (max-width: $mantine-breakpoint-md) {
+    margin-top: var(--mantine-spacing-xl);
   }
 }
 

@@ -94,7 +94,7 @@ const PropertyCard: React.FC<PropertyCardProps> = (props) => {
         </Box>
       </Card.Section>
       <Card.Section inheritPadding pt="lg" pb="sm">
-        <Group wrap="nowrap" grow>
+        <Group className={classes.btnGroup}>
           <Button
             variant="secondary"
             h={rem(66)}
@@ -102,8 +102,10 @@ const PropertyCard: React.FC<PropertyCardProps> = (props) => {
             justify="space-between"
             classNames={{
               label: classes.buttonLabel,
+              root: classes.button,
             }}
             radius={rem(6)}
+            fullWidth
           >
             <Stack gap={rem(4)} align="flex-start" py={rem(8)}>
               <Text variant="secondary" fw={500} size="sm">
@@ -138,6 +140,7 @@ const PropertyCard: React.FC<PropertyCardProps> = (props) => {
             }}
             radius={rem(6)}
             pos="relative"
+            fullWidth
           >
             <Stack gap={rem(4)} align="flex-start" py={rem(8)}>
               {/* Todo */}

@@ -1,21 +1,22 @@
-import { Box, rem } from "@mantine/core";
-
+import { Box } from "@mantine/core";
 import React from "react";
-import HeroHeader from "../../components/Homepage/HeroHeader";
 import Amenities from "../../components/Homepage/Amenities";
-import SpaceOverview from "../../components/Homepage/SpaceOverview";
 import AppDownload from "../../components/Homepage/AppDownload";
+import HeroHeader from "../../components/Homepage/HeroHeader";
+import SpaceOverview from "../../components/Homepage/SpaceOverview";
+import classes from "./Homepage.module.css";
+
 const HomePage: React.FC = () => {
   return (
     <Box px="md">
       <HeroHeader />
-      <Box mt={rem(36)}>
+      <Box className={classes.amenities}>
         <Amenities />
       </Box>
-      <Box mt={rem(120)}>
+      <Box className={classes.spaceOverview}>
         <SpaceOverview />
       </Box>
-      <Box mt={rem(120)}>
+      <Box className={classes.appDownload}>
         <AppDownload />
       </Box>
     </Box>

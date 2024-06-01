@@ -18,21 +18,19 @@ import classes from "./AppDownload.module.css";
 const AppDownload: React.FC = () => {
   return (
     <Box>
-      <Title order={2}>Download our app now</Title>
+      <Title order={2} className={classes.heading}>
+        Download our app now
+      </Title>
       <Paper
         withBorder
-        mt={rem(180)}
         pos="relative"
         radius="lg"
         shadow="sm"
         p="md"
+        className={classes.content}
       >
-        <Image
-          src={download}
-          alt="download-app"
-          className={classes.image}
-        />
-        <Stack className={classes.downloadContainer} h="100%" >
+        <Image src={download} alt="download-app" className={classes.image} />
+        <Stack className={classes.downloadContainer} h="100%">
           <Text visibleFrom="md" fw={500} fz="h4" c="dark.3">
             Boost your productivity with the BHIVE Workspace app. Elevate your
             workspace, collaborate efficiently, and unlock exclusive perks.

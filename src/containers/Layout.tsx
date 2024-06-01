@@ -38,7 +38,7 @@ const Layout: React.FC<PropsWithChildren> = (props) => {
         </Container>
       </AppShell.Header>
 
-      <AppShell.Main>
+      <AppShell.Main style={{ overflowX: "hidden" }}>
         <Container h="100%" p={0}>
           {props.children}
         </Container>
