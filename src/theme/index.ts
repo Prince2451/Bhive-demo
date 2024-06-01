@@ -12,7 +12,7 @@ import classes from "./theme.module.css";
 
 export const theme = createTheme({
   /* Put your mantine theme override here */
-  fontFamily: "Inter, sans-serif",
+  fontFamily: "Inter, Arial, sans-serif",
   components: {
     Container: Container.extend({
       defaultProps: {
@@ -54,7 +54,7 @@ export const theme = createTheme({
   },
   cursorType: "pointer",
   headings: {
-    fontFamily: "Inter, sans-serif",
+    fontFamily: "Inter, Arial, sans-serif",
     sizes: {
       h1: { fontSize: rem(58), lineHeight: "1.1em" },
       h2: { fontSize: rem(36), lineHeight: "1.1em" },
